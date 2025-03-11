@@ -1,3 +1,10 @@
+local gameID = 128987359438009
+
+if game.PlaceId ~= gameID then
+    game.Players.LocalPlayer:Kick("This script can only be used in Funnel Tycoon 2.")
+    return
+end
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
