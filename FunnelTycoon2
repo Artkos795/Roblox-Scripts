@@ -1,0 +1,25 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Funnel Tycoon 2",
+    LoadingTitle = "Loading Funnel Tycoon 2",
+    LoadingSubtitle = "by Unnamed_.01512",
+    Discord = {
+        Enabled = true,
+        Invite = "bwUx2Vuqne",
+        RememberJoins = false
+    },
+})
+
+local Tab = Window:CreateTab("Main", 4483362458)
+
+Tab:CreateButton({
+    Name = "Infinite Money",
+    Callback = function()
+        local args = {
+            {Money = 999999999999999, ToCollect = 0},
+            "hello world"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PayPlayer"):FireServer(unpack(args))
+    end
+})
